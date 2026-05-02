@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AoT | Beyond the Walls</title>
+    <!-- Google Fonts for that gritty/modern look -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@300;400;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Loading Overlay (The Steam Effect) -->
+    <div id="preloader">
+        <div class="steam-container">
+            <div class="steam-particle"></div>
+            <div class="steam-particle"></div>
+            <div class="steam-particle"></div>
+        </div>
+        <h1 class="loader-text">DEDICATE YOUR HEART</h1>
+    </div>
+
+    <!-- Smooth Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav class="glass-nav">
+	<div class="logo">
+    		<img src="assets/levi.jpg" alt="AOT Logo" style="height: 40px;">
+	</div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">The Walls</a></li>
+            <li><a href="#titans">The Nine</a></li>
+            <li><a href="#lore">Archives</a></li>
+        </ul>
+        <div class="nav-cta">
+            <button class="join-btn">Join the Corps</button>
+        </div>
+    </nav>
+
+
+
+		<!-- Add this right after the <nav> -->
+	<div class="music-control">
+    		<button id="music-toggle">DEDICATE YOUR HEART (PLAY)</button>
+    		<audio id="bg-music" loop>
+        	<source src="assets/music/matadora.mp3" type="audio/mpeg">
+    		</audio>
+	</div>
+
+
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="parallax-section">
+            <div class="overlay"></div>
+            <div class="hero-inner">
+                <h2 class="subtitle">Year 845</h2>
+                <h1 class="main-title">ATTACK ON TITAN</h1>
+                <p class="hero-desc">The world is cruel, but also very beautiful.</p>
+                <div class="scroll-indicator">
+                    <span>Explore</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Titan Gallery Section -->
+        <section id="titans" class="content-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="count">01</span>
+                    <h2>The Inheritors</h2>
+                </div>
+                
+                <div class="titan-grid">
+                    <!-- Cards will be styled in CSS to have smooth hover reveals -->
+                    <div class="titan-card" data-titan="attack">
+                        <div class="card-bg">
+        			<img src="assets/attack.jpg" class="character-img" alt="Attack Titan">
+			</div>
+                        <div class="card-info">
+                            <h3>Attack Titan</h3>
+                            <p>Eren Yeager</p>
+                        </div>
+                    </div>
+                    
+                    <div class="titan-card" data-titan="armored">
+                        <div class="card-bg">
+				<img src="assets/armore.jpg" class="character-img" alt="Armored Titan">
+			</div>
+                        <div class="card-info">
+                            <h3>Armored Titan</h3>
+                            <p>Reiner Braun</p>
+                        </div>
+                    </div>
+
+                    <div class="titan-card" data-titan="colossal">
+                        <div class="card-bg">
+				<img src="assets/colossal.jpg" class="character-img" alt="Colossal Titan">
+			</div>
+                        <div class="card-info">
+                            <h3>Colossal Titan</h3>
+                            <p>Armin Arlert</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Smooth Scroll & Logic Script -->
+    <script src="js/main.js"></script>
+</body>
+</html>

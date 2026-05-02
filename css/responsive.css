@@ -1,0 +1,87 @@
+/* --- Tablets and Small Desktops (under 1024px) --- */
+@media screen and (max-width: 1024px) {
+    .glass-nav {
+        padding: 20px 5%;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .main-title {
+        font-size: 4rem; /* Scale down the giant heading */
+    }
+}
+
+/* --- Mobile Devices (under 768px) --- */
+@media screen and (max-width: 768px) {
+    /* Adjust Navigation */
+    .nav-links {
+        display: none; /* In a full build, you'd trigger a burger menu here */
+    }
+
+    .join-btn {
+        padding: 8px 16px;
+        font-size: 0.8rem;
+    }
+
+    /* Hero Section Adjustments */
+    .hero-inner {
+        padding: 0 20px;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+        letter-spacing: 3px;
+    }
+
+    .hero-desc {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    /* Titan Grid: Single Column */
+    .titan-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .titan-card {
+        height: 350px; /* Shorter cards for mobile scrolling */
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Disable Parallax for Mobile Performance */
+    .parallax-section {
+        background-attachment: scroll;
+    }
+}
+
+/* --- Small Phones (under 480px) --- */
+@media screen and (max-width: 480px) {
+    .main-title {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .content-section {
+        padding: 60px 5%;
+    }
+}
+
+/* --- High Refresh Rate / Smoothness optimization --- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
